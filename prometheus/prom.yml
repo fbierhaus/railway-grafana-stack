@@ -8,8 +8,9 @@ scrape_configs:
 
   - job_name: 'sun-moon-signs'
     scheme: http
+    metrics_path: /actuator/prometheus
     static_configs:
-       - targets: ['sun-moon-signs:8081/actuator/prometheus']
+       - targets: ['sun-moon-signs:8081']
 
   #  ? TODO: add your services here
   # - job_name: 'your-job-name'
